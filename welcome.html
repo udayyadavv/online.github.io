@@ -1,0 +1,88 @@
+<html>
+    
+    <head> 
+        <title>Online Voting System</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+
+    <body>
+
+    <div id="background-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
+
+        <center>
+        <div id="headerSection">
+            <h1>Online Voting System</h1>   
+        </div>
+        <hr>
+    
+        <div id="bodySection">
+            <form action="api/login.php" method="POST">
+                <h2>Login</h2>
+                <input type="number" name="mobile" placeholder="Enter mobile"><br><br>
+                <input type="password" name="password" placeholder="Enter password"><br><br>
+                <select id="dropbox" name="role">
+                    <option value="1">Voter</option>
+                    <option value="2">Group</option>
+                </select><br><br>
+                <button id="loginbtn" type="submit">Login</button><br><br>
+                New user? <a href="routes/Register.html">Register here</a>
+            </form>
+        </div>
+        </center>
+        
+        
+        
+    </body>
+
+</html>
+
+Alert! You Are In Under The Camera Vigilance For Voting Process...
+
+<!doctype html>
+<html>
+<head>
+    <title>Capture picture from your webcam</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.js"></script>
+</head>
+
+<body>
+    <div id="camera" style="height:auto;width:auto; text-align:left;"></div>
+
+    <!--FOR THE SNAPSHOT-->
+    <input type="button" value="Take a Snap" id="btPic" onclick="takeSnapShot()" /> 
+    <p id="snapShot"></p>
+</body>
+
+<script>
+    // CAMERA SETTINGS.
+    Webcam.set({
+        width: 220,
+        height: 190,
+        image_format: 'jpeg',
+        jpeg_quality: 100
+    });
+    Webcam.attach('#camera');
+
+    // SHOW THE SNAPSHOT.
+    takeSnapShot = function () {
+        Webcam.snap(function (data_uri) {
+            document.getElementById('snapShot').innerHTML = 
+                '<img src="' + data_uri + '" width="70px" height="50px" />';
+        });
+    }
+</script>
+</html>
+
+
+
